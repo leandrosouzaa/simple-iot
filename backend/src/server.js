@@ -1,4 +1,8 @@
+import five from 'johnny-five'
 import app from './app';
+
+const board = new five.Board();
+
 
 function startServer() {
    app.listen(3333, () => {
@@ -6,4 +10,4 @@ function startServer() {
    })
 }
 
-startServer();
+board.on('ready', startServer);
