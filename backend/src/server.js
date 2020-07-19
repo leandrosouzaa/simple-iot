@@ -4,13 +4,19 @@ import express from 'express';
 const board = new five.Board();
 
 board.on('ready',() => {
-   const app = express();
-   app.use(express.json());
-
    const led = new five.Led(2);
    const lcd = new five.LCD({ 
       controller: "PCF8574AT"
    });
+
+   lcd.clear();
+   lcd.print(`API Starting`)
+   lcd.cursor(1,0).print('Wait please...')
+
+   const app = express();
+   app.use(express.json());
+
+
    
    app.get('/turn-on/:id', (req, res) => {
       const {id} = req.params
@@ -75,6 +81,9 @@ board.on('ready',() => {
    })
 
    app.listen(3333, () => {
+      lcd.clear();
+      lcd.print(`API Online.`)
+      lcd.cursor(1,0).print('API Port: 3333')
       console.log('Server Started in port 3333')
    })
 })
