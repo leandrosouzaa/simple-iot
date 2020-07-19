@@ -15,7 +15,7 @@ declare const global: {HermesInternal: null | {}};
 
 const App = () => {
   const [message, setMessage] = useState('');
-  const [interval, setInterval] = useState(10);
+  const [interval, setInterval] = useState(1);
 
   const handleTurnOnButton = async () => {
     await api.get('turn-on/2');
@@ -26,17 +26,14 @@ const App = () => {
   };
 
   const handleMessageSubmit = async () => {
+    console.log(message);
     await api.post('lcd', {
       message,
     });
   };
 
   const handleIntervalSubmit = async () => {
-    await api.get('blink', {
-      params: {
-        interval,
-      },
-    });
+    await api.get(`blink/2?interval=${interval * 1000}`);
   };
 
   return (
@@ -69,6 +66,7 @@ const App = () => {
           onSubmitEditing={() => handleMessageSubmit()}
         />
         <TouchableOpacity
+          onPress={() => handleMessageSubmit()}
           style={{...styles.button, width: '100%', marginTop: 8}}>
           <Text style={styles.textButton}>Send</Text>
         </TouchableOpacity>
