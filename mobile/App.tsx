@@ -6,13 +6,38 @@ import {
   StatusBar,
   TouchableOpacity,
   TextInput,
+  Alert,
 } from 'react-native';
+
+import api from './src/services/api';
 
 declare const global: {HermesInternal: null | {}};
 
 const App = () => {
   const [message, setMessage] = useState('');
   const [interval, setInterval] = useState(10);
+
+  const handleTurnOnButton = async () => {
+    await api.get('turn-on/2');
+  };
+
+  const handleTurnOffButton = async () => {
+    await api.get('turn-off/2');
+  };
+
+  const handleMessageSubmit = async () => {
+    await api.post('lcd', {
+      message,
+    });
+  };
+
+  const handleIntervalSubmit = async () => {
+    await api.get('blink', {
+      params: {
+        interval,
+      },
+    });
+  };
 
   return (
     <>
@@ -24,12 +49,12 @@ const App = () => {
         <View style={styles.row}>
           <TouchableOpacity
             style={{...styles.button, width: '49%'}}
-            onPress={() => {
-              console.log('oi');
-            }}>
+            onPress={() => handleTurnOnButton()}>
             <Text style={styles.textButton}>Turn On</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={{...styles.button, width: '49%'}}>
+          <TouchableOpacity
+            style={{...styles.button, width: '49%'}}
+            onPress={() => handleTurnOffButton()}>
             <Text style={styles.textButton}>Turn Off</Text>
           </TouchableOpacity>
         </View>
@@ -41,6 +66,7 @@ const App = () => {
           placeholderTextColor="#858585"
           style={styles.input}
           onChangeText={(text) => setMessage(text)}
+          onSubmitEditing={() => handleMessageSubmit()}
         />
         <TouchableOpacity
           style={{...styles.button, width: '100%', marginTop: 8}}>
@@ -57,9 +83,13 @@ const App = () => {
             style={{...styles.input, width: '70%'}}
             keyboardType="decimal-pad"
             onChangeText={(text) => setInterval(Number(text))}
+            onSubmitEditing={() => handleIntervalSubmit()}
           />
           <TouchableOpacity
-            style={{...styles.button, width: '28%', marginTop: 0}}>
+            style={{...styles.button, width: '28%', marginTop: 0}}
+            onPress={() => {
+              handleIntervalSubmit();
+            }}>
             <Text style={styles.textButton}>Blink</Text>
           </TouchableOpacity>
         </View>
