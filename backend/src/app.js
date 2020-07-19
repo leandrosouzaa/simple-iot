@@ -41,4 +41,15 @@ app.get('/turn-off/:id', (req, res) => {
 
 })
 
+app.post('/lcd', (req, res) => {
+   const {message} = req.body;
+
+   const lcd = new five.LCD({ 
+      controller: "PCF8574AT"
+   });
+
+   lcd.print(message); 
+
+})
+
 export default app;
