@@ -69,8 +69,10 @@ app.post('/lcd', (req, res) => {
    const lcd = new five.LCD({ 
       controller: "PCF8574AT"
    });
+   lcd.print('Message Received')
+   lcd.cursor(1,0).print(message); 
 
-   lcd.print(message); 
+   return res.json({message:'success'})
 
 })
 
