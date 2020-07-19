@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   StyleSheet,
   View,
@@ -11,6 +11,9 @@ import {
 declare const global: {HermesInternal: null | {}};
 
 const App = () => {
+  const [message, setMessage] = useState('');
+  const [interval, setInterval] = useState(10);
+
   return (
     <>
       <StatusBar backgroundColor="#262626" />
@@ -37,6 +40,7 @@ const App = () => {
           placeholder="Max 16 characters"
           placeholderTextColor="#858585"
           style={styles.input}
+          onChangeText={(text) => setMessage(text)}
         />
         <TouchableOpacity
           style={{...styles.button, width: '100%', marginTop: 8}}>
@@ -51,6 +55,8 @@ const App = () => {
             placeholder="Interval in Seconds"
             placeholderTextColor="#858585"
             style={{...styles.input, width: '70%'}}
+            keyboardType="decimal-pad"
+            onChangeText={(text) => setInterval(Number(text))}
           />
           <TouchableOpacity
             style={{...styles.button, width: '28%', marginTop: 0}}>
@@ -72,7 +78,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 32,
     fontWeight: '700',
-    color: '#D8D8D8',
+    color: '#EEE',
     textAlign: 'center',
     paddingTop: 32,
   },
