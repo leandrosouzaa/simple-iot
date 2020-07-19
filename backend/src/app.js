@@ -17,7 +17,8 @@ app.get('/turn-on/:id', (req, res) => {
    led.on();
 
    lcd.clear();
-   lcd.print('Led Status: on  ')
+   lcd.print(`Led Port: ${id}`)
+   lcd.cursor(1,0).print('Led Status: On')
 
    return res.json({message: 'success'})
 
@@ -34,7 +35,28 @@ app.get('/turn-off/:id', (req, res) => {
    led.off()
 
    lcd.clear();
-   lcd.print('Led Status: off ')
+   lcd.print(`Led Port: ${id}`)
+   lcd.cursor(1,0).print('Led Status: Off')
+
+
+   return res.json({message: 'success'})
+
+})
+
+app.get('/blink/:id', (req, res) => {
+   const {id} = req.params
+   const {interval} = req.query;
+
+   const led = new five.Led(id);
+   const lcd = new five.LCD({ 
+      controller: "PCF8574AT"
+    });
+
+   led.blink(interval)
+
+   lcd.clear();
+   lcd.print(`Blink on port ${id}`)
+   lcd.cursor(1,0).print(`Interval: ${interval}ms`)
 
 
    return res.json({message: 'success'})
