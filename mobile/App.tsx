@@ -54,7 +54,7 @@ const App = () => {
           />
           <TouchableOpacity
             style={{...styles.button, width: '28%', marginTop: 0}}>
-            <Text style={styles.textButton}>Send</Text>
+            <Text style={styles.textButton}>Blink</Text>
           </TouchableOpacity>
         </View>
       </View>
