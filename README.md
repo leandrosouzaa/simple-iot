@@ -32,6 +32,7 @@
 </p> 
 
 ## Projeto 💻 
+Uma pequena aplicação desenvolvida em Node, React e React-Native com a itenção de aprender um pouco mais sobre IoT enquanto prático o desenvolvimento full stack. 
 
 ## 👾 Tecnologias 
 Foram utilizadas as seguintes tecnologias para o desenvolvimento do projeto
@@ -47,21 +48,21 @@ Foram utilizadas as seguintes tecnologias para o desenvolvimento do projeto
    >The JavaScript Robotics Programming Framework
    
 ## 👷‍♂️ Clonagem 
- * <b>Pré-Requisitos:</b> Para clonar e rodar esta aplicação você recisa configurar o ambiente para:
+ * <b>Pré-Requisitos:</b> Para clonar e rodar esta aplicação você precisa configurar o ambiente para:
    - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
    - [NodeJs](https://nodejs.org/en/download/)
    - [Yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable)
    - [ReactJs](https://reactjs.org/docs/getting-started.html)
    - [React-Native](https://reactnative.dev/docs/getting-started)
    - [Jhonny-Five](https://github.com/rwaldron/johnny-five/wiki/Getting-Started)
- * <b>Circuito utilizado na aplicação:</b> Você pode visualizar ele em uma qualidade melhor [neste link](https://www.tinkercad.com/things/l8lk2AWqp5p-simple-iot)
+ * <b>Circuito utilizado na aplicação:</b> Você pode visualizar ele em uma qualidade melhor [neste link](https://www.tinkercad.com/things/l8lk2AWqp5p-simple-iot).
       <img alt="printscreen" title="#app" width="100%" src="/files/circuito.png" width="100%" />
  * <b>Clonagem</b>
    - Com o Git instalado, execute o seguinte comando no terminal: <br />```git clone https://github.com/leandrosouzaa/simple-iot.git```
    - Aguarde o término de dowload, após a conslusão digite o comando a seguir para acessar o diretório do projeto: <br />```cd simple-iot```
  * <b>Backend</b>
    - Com o Yarn já instalado execute o seguinte comando para acessar o diretório do backend e instalar as dependências utilizadas:<br />```cd backend && yarn```
-   - Enquanto aguarda e instalação dos pacotes verifique se a placa está conectada no computador com o circuito devidamente montado e confirme se cumpriu todos os pré-requisitos citados acima.
+   - Enquanto aguarda a instalação dos pacotes verifique se a placa está conectada no computador com o circuito devidamente montado e confirme se cumpriu todos os pré-requisitos citados acima.
    - Com os passos anteriores já realizados inicie o servidor através do seguinte script: <br/>
    ```yarn dev```
    - Caso tudo ocorra como o planejado você irá visualizar a mensagem "API Online" no seu display LCD e os seguintes logs em seu terminal: <br />
@@ -72,16 +73,16 @@ Foram utilizadas as seguintes tecnologias para o desenvolvimento do projeto
     >> Server Started in port 3333
    ```
  * <b>Web</b>
-   - Abre um terminal no diretório clonado anteriormente (simple-iot)
+   - Abra um terminal no diretório clonado anteriormente (simple-iot).
    - Com o Yarn já instalado execute o seguinte comando para acessar o diretório do frontend e instalar as dependências utilizadas:<br />```cd web && yarn```
-   - Enquanto aguarda e instalação dos pacotes verifique se cumpriu todos os pré-requisitos citados acima.
+   - Enquanto aguarda a instalação dos pacotes verifique se cumpriu todos os pré-requisitos citados acima.
    - Após o término da execução, execute o seguinte comando para executar o servidor Web: <br /> ```yarn start```
    - Em seguida, irá abrir uma aba em seu navegador contendo a versão web da aplicação. Divirta-se!
    - <b>Atenção</b>: Para utilizar o cliente web da aplicação é necessário estar com o backend rodando.
 * <b>Mobile</b>
-   - Abre um terminal no diretório clonado anteriormente (simple-iot)
+   - Abra um terminal no diretório clonado anteriormente (simple-iot).
    - Com o Yarn já instalado execute o seguinte comando para acessar o diretório do frontend e instalar as dependências utilizadas:<br />```cd mobile && yarn```
-   - Enquanto aguarda e instalação dos pacotes verifique se cumpriu todos os pré-requisitos citados acima.
+   - Enquanto aguarda a instalação dos pacotes verifique se cumpriu todos os pré-requisitos citados acima.
    - Após o término da instalação dos pacotes, execute o comando a seguir para instalar a aplicação em seu dispositivo confome o sistema operacional do mesmo: <br />
    ```
    ## android
@@ -91,10 +92,10 @@ Foram utilizadas as seguintes tecnologias para o desenvolvimento do projeto
    yarn ios
    ```
   - Em outro terminal, execute este comando para iniciar o bundle da aplicação: <br /> ```yarn start```
-  - Feito isso, basta aguardar e a aplicação irá inicar em seu dispositivo. Divirta-se!
+  - Feito isso, basta aguardar e a aplicação irá iniciar em seu dispositivo. Divirta-se!
   - <b>Atenção</b>: Para utilizar o cliente mobile da aplicação é necessário estar com o backend rodando.
-* Aviso: Talvez será necessário mudar o endereço da API. O mesmo se encontra no arquivo src/services/api de cada diretório (web e mobile)
-* Caso tenha algum problema, sinta-se a vontade para [abrir uma issue neste repositório](https://github.com/leandrosouzaa/simple-iot/issues/new) que eu tentarei te ajudar ao máximo!.
+* <b>Aviso </b>: Talvez será necessário mudar o endereço da API. O mesmo se encontra no arquivo src/services/api de cada diretório (web e mobile).
+* Caso tenha algum problema, sinta-se a vontade para [abrir uma issue neste repositório](https://github.com/leandrosouzaa/simple-iot/issues/new) que eu tentarei te ajudar ao máximo!
   
 ## 👨‍💻 Desenvolvedor 
  <table>
