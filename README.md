@@ -16,24 +16,22 @@
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
   
-  <a href="https://github.com/leandrosouzaa/github-explorer/stargazers">
+  <a href="https://github.com/leandrosouzaa/simple-iot/stargazers">
     <img alt="Repository" issues" src="https://img.shields.io/github/stars/leandrosouzaa/simple-iot?style=social" />                       </a>
 </p>
                                                                                                                       
 <p align="center">
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-dependências">Dependências</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-clonagem-e-debug">Clonagem e Debug</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-clonagem">Clonagem e Debug</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-desenvolvedor">Desenvolvedor</a>
 </p>                                                                                                                      
 
 <p align="center">
-    <img alt="printscreen" title="#app" width="95%" src="/files/mock.png" width="100%" />
+    <img alt="printscreen" title="#app" width="100%" src="/files/mock.png" width="100%" />
 </p> 
 
 ## Projeto 💻 
-O GoBarber consiste em uma aplicação que permite o agendamento e gerenciamento de horários em barbearias e salões de beleza. Ao entrar na aplicação, o usuário pode agendar um horário, alterar dados de cadastro (nome, email, foto de perfil...) e ofertar seus serviços na plataforma. A aplicação possui uma versão web (responsiva para telas menores) e dois aplicativos mobile (Android e iOS). Todos os dados são armazenados em um banco de dados PostgreSQL e disponibilizados via uma API.
 
 ## 👾 Tecnologias 
 Foram utilizadas as seguintes tecnologias para o desenvolvimento do projeto
@@ -45,10 +43,10 @@ Foram utilizadas as seguintes tecnologias para o desenvolvimento do projeto
    >Node.js JavaScript runtime ✨🐢🚀✨ https://nodejs.org/
 *  [Express](https://expressjs.com)
    >Fast, unopinionated, minimalist web framework for node. https://expressjs.com
+*  [Jhonny-Five](https://github.com/rwaldron/johnny-five)
+   >The JavaScript Robotics Programming Framework
    
-## 🛠 Dependências 
-
-## 👷‍♂️ Clonagem e debug 
+## 👷‍♂️ Clonagem 
   {...}
 
 ## 👨‍💻 Desenvolvedor 
