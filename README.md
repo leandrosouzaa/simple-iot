@@ -94,7 +94,7 @@ Foram utilizadas as seguintes tecnologias para o desenvolvimento do projeto
   - Feito isso, basta aguardar e a aplicação irá inicar em seu dispositivo. Divirta-se!
   - <b>Atenção</b>: Para utilizar o cliente mobile da aplicação é necessário estar com o backend rodando.
 * Aviso: Talvez será necessário mudar o endereço da API. O mesmo se encontra no arquivo src/services/api de cada diretório (web e mobile)
-* Caso tenha algum problema, sinta-se a vontade para [abrir uma issue neste repositório](https://github.com/leandrosouzaa/simple-iot/issues/new) que eu irei tentar te ajudar ao máximo!.
+* Caso tenha algum problema, sinta-se a vontade para [abrir uma issue neste repositório](https://github.com/leandrosouzaa/simple-iot/issues/new) que eu tentarei te ajudar ao máximo!.
   
 ## 👨‍💻 Desenvolvedor 
  <table>
