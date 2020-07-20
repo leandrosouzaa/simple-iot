@@ -1,5 +1,6 @@
 import five from 'johnny-five';
 import express from 'express';
+import cors from 'cors'
 
 const board = new five.Board();
 
@@ -19,6 +20,7 @@ board.on('ready',() => {
 
    const app = express();
    app.use(express.json());
+   app.use(cors())
 
    app.get('/turn-on/:id', (req, res) => {
       const {id} = req.params;
