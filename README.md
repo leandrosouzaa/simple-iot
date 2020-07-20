@@ -17,7 +17,7 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
   
   <a href="https://github.com/leandrosouzaa/github-explorer/stargazers">
-    <img alt="Repository" issues" src="https://img.shields.io/github/stars/leandrosouzaa/simple-iot?style=social"                       </a>
+    <img alt="Repository" issues" src="https://img.shields.io/github/stars/leandrosouzaa/simple-iot?style=social" />                       </a>
 </p>
                                                                                                                       
 <p align="center">
@@ -29,13 +29,13 @@
 </p>                                                                                                                      
 
 <p align="center">
-    <img alt="printscreen" title="#app" width="95%" src="./files/mockup.png" width="450px" />
+    <img alt="printscreen" title="#app" width="95%" src="/files/mock.png" width="100%" />
 </p> 
 
-## 💻 Projeto 
+## Projeto 💻 
 O GoBarber consiste em uma aplicação que permite o agendamento e gerenciamento de horários em barbearias e salões de beleza. Ao entrar na aplicação, o usuário pode agendar um horário, alterar dados de cadastro (nome, email, foto de perfil...) e ofertar seus serviços na plataforma. A aplicação possui uma versão web (responsiva para telas menores) e dois aplicativos mobile (Android e iOS). Todos os dados são armazenados em um banco de dados PostgreSQL e disponibilizados via uma API.
 
-## 👾 Tecnologias
+## Tecnologias 👾
 Foram utilizadas as seguintes tecnologias para o desenvolvimento do projeto
 *  [React](https://github.com/facebook/react)
    >A declarative, efficient, and flexible JavaScript library for building user interfaces. https://reactjs.org
@@ -46,12 +46,12 @@ Foram utilizadas as seguintes tecnologias para o desenvolvimento do projeto
 *  [Express](https://expressjs.com)
    >Fast, unopinionated, minimalist web framework for node. https://expressjs.com
    
-## 🛠 Dependências
+## Dependências 🛠
 
-## 👷‍♂️ Clonagem e debug
+## Clonagem e debug 👷‍♂️
   {...}
 
-## 👨‍💻 Desenvolvedor
+## Desenvolvedor 👨‍💻
  <table>
   <tr>
     <td>
