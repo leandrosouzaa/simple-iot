@@ -71,6 +71,13 @@ Foram utilizadas as seguintes tecnologias para o desenvolvimento do projeto
    1595280497438 Repl Initialized  
     >> Server Started in port 3333
    ```
+ * <b>Web</b>
+   - Abre um terminal no diretório clonado anteriormente (simple-iot)
+   - Com o Yarn já instalado execute o seguinte comando para acessar o diretório do frontend e instalar as dependências utilizadas:<br />```cd frontend && yarn```
+   - Enquanto aguarda e instalação dos pacotes verifique se a placa está conectado no computador com o circuito devidamente montado e confirme se cumpriu todos os pré-requisitos citados acima
+   - Após o termino da execução, execute o seguinte comando para executar o servidor Web: <br /> ```yarn start```
+   - Em seguida, irá abrir uma aba em seu navegador contendo a versão web da aplicação. Divirta-se!
+   - <b>Atenção</b>: Para utilizar o cliente web da aplicação é necessário estar com o backend rodando
 
 
    
