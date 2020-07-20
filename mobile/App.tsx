@@ -26,7 +26,6 @@ const App = () => {
   };
 
   const handleMessageSubmit = async () => {
-    console.log(message);
     await api.post('lcd', {
       message,
     });
@@ -66,6 +65,7 @@ const App = () => {
           onSubmitEditing={() => handleMessageSubmit()}
         />
         <TouchableOpacity
+          activeOpacity={0.5}
           onPress={() => handleMessageSubmit()}
           style={{...styles.button, width: '100%', marginTop: 8}}>
           <Text style={styles.textButton}>Send</Text>
