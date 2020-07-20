@@ -1,7 +1,7 @@
 <h1 align="center">
   Simple IoT
 </h1>
-<h4 align="center">✂️ Awesome Haircuts & Shaves ✂️</h4>
+<h4 align="center">🤖 My Hello World on IoT using Arduino 🤖</h4>
 
 <p align="center">
   <img alt="GitHub language" src="https://img.shields.io/github/languages/top/leandrosouzaa/simple-iot">
@@ -10,7 +10,7 @@
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/leandrosouzaa/simple-iot.svg">
   
-  <a href="https://github.com/leandrosouzaa/github-explorer/commits/master">
+  <a href="https://github.com/leandrosouzaa/simple-iot/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/leandrosouzaa/simple-iot.svg">
   </a>
 
@@ -47,8 +47,34 @@ Foram utilizadas as seguintes tecnologias para o desenvolvimento do projeto
    >The JavaScript Robotics Programming Framework
    
 ## 👷‍♂️ Clonagem 
-  {...}
+ * <b>Pré-Requisitos:</b> Para clonar e rodar esta aplicação você precisa configurar o ambiente para:
+   - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+   - [NodeJs](https://nodejs.org/en/download/)
+   - [Yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable)
+   - [ReactJs](https://reactjs.org/docs/getting-started.html)
+   - [React-Native](https://reactnative.dev/docs/getting-started)
+   - [Jhonny-Five](https://github.com/rwaldron/johnny-five/wiki/Getting-Started)
+ * <b>Circuito utilizado na aplicação:</b> Vocẽ pode visualizar ele em uma qualidade melhor [neste link](https://www.tinkercad.com/things/l8lk2AWqp5p-simple-iot)
+      <img alt="printscreen" title="#app" width="100%" src="/files/circuito.png" width="100%" />
+ * <b>Clonagem</b>
+   - Com o Git instalado, execute o seguinte comando no terminal: <br />```git clone https://github.com/leandrosouzaa/simple-iot.git```
+   - Aguarde o término de dowload, após a conslusão digite o comando a seguir para acessar o diretório do projeto: <br />```cd simple-iot```
+ * <b>Backend</b>
+   - Com o Yarn já instalado execute o seguinte comando para acessar o diretório do backend e instalar as dependências utilizadas:<br />```cd backend && yarn```
+   - Enquanto aguarda e instalação dos pacotes verifique se a placa está conectado no computador com o circuito devidamente montado e confirme se cumpriu todos os pré-requisitos citados acima
+   - Com os passos anteriores já realizados inicie o servidor através do seguinte script: <br/>
+   ```yarn dev```
+   - Caso tudo ocorra como o planejado, caso tudo ocorra como o planejado você irá visualziar a mensagem "API Online" no seu display LCD e os seguintes logs em seu terminal: <br />
+   ```
+   1595280495781 Available /dev/ttyUSB0  
+   1595280495787 Connected /dev/ttyUSB0  
+   1595280497438 Repl Initialized  
+    >> Server Started in port 3333
+   ```
 
+
+   
+  
 ## 👨‍💻 Desenvolvedor 
  <table>
   <tr>
