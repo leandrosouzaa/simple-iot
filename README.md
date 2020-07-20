@@ -61,7 +61,7 @@ Foram utilizadas as seguintes tecnologias para o desenvolvimento do projeto
    - Aguarde o término de dowload, após a conslusão digite o comando a seguir para acessar o diretório do projeto: <br />```cd simple-iot```
  * <b>Backend</b>
    - Com o Yarn já instalado execute o seguinte comando para acessar o diretório do backend e instalar as dependências utilizadas:<br />```cd backend && yarn```
-   - Enquanto aguarda e instalação dos pacotes verifique se a placa está conectado no computador com o circuito devidamente montado e confirme se cumpriu todos os pré-requisitos citados acima
+   - Enquanto aguarda e instalação dos pacotes verifique se a placa está conectado no computador com o circuito devidamente montado e confirme se cumpriu todos os pré-requisitos citados acima.
    - Com os passos anteriores já realizados inicie o servidor através do seguinte script: <br/>
    ```yarn dev```
    - Caso tudo ocorra como o planejado, caso tudo ocorra como o planejado você irá visualziar a mensagem "API Online" no seu display LCD e os seguintes logs em seu terminal: <br />
@@ -73,14 +73,28 @@ Foram utilizadas as seguintes tecnologias para o desenvolvimento do projeto
    ```
  * <b>Web</b>
    - Abre um terminal no diretório clonado anteriormente (simple-iot)
-   - Com o Yarn já instalado execute o seguinte comando para acessar o diretório do frontend e instalar as dependências utilizadas:<br />```cd frontend && yarn```
-   - Enquanto aguarda e instalação dos pacotes verifique se a placa está conectado no computador com o circuito devidamente montado e confirme se cumpriu todos os pré-requisitos citados acima
-   - Após o termino da execução, execute o seguinte comando para executar o servidor Web: <br /> ```yarn start```
+   - Com o Yarn já instalado execute o seguinte comando para acessar o diretório do frontend e instalar as dependências utilizadas:<br />```cd web && yarn```
+   - Enquanto aguarda e instalação dos pacotes verifique se cumpriu todos os pré-requisitos citados acima.
+   - Após o término da execução, execute o seguinte comando para executar o servidor Web: <br /> ```yarn start```
    - Em seguida, irá abrir uma aba em seu navegador contendo a versão web da aplicação. Divirta-se!
-   - <b>Atenção</b>: Para utilizar o cliente web da aplicação é necessário estar com o backend rodando
-
-
+   - <b>Atenção</b>: Para utilizar o cliente web da aplicação é necessário estar com o backend rodando.
+* <b>Mobile</b>
+   - Abre um terminal no diretório clonado anteriormente (simple-iot)
+   - Com o Yarn já instalado execute o seguinte comando para acessar o diretório do frontend e instalar as dependências utilizadas:<br />```cd mobile && yarn```
+   - Enquanto aguarda e instalação dos pacotes verifique se cumpriu todos os pré-requisitos citados acima.
+   - Após o término da instalação dos pacotes, execute o comando a seguir para instalar a aplicação em seu dispositivo confome o sistema operacional do mesmo: <br />
+   ```
+   ## android
+   yarn android
    
+   ## ios
+   yarn ios
+   ```
+  - Em outro terminal, execute este comando para iniciar o bundle da aplicação: <br /> ```yarn start```
+  - Feito isso, basta aguardar e a aplicação irá inicar em seu dispositivo. Divirta-se!
+  - <b>Atenção</b>: Para utilizar o cliente mobile da aplicação é necessário estar com o backend rodando.
+* Aviso: Talvez será necessário mudar o endereço da API. O mesmo se encontra no arquivo src/services/api de cada diretório (web e mobile)
+* Caso tenha algum problema, sinta-se a vontade para [abrir uma issue neste repositório](https://github.com/leandrosouzaa/simple-iot/issues/new) que eu irei tentar te ajudar ao máximo!.
   
 ## 👨‍💻 Desenvolvedor 
  <table>
