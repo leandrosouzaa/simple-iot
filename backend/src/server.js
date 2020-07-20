@@ -9,81 +9,61 @@ board.on('ready',() => {
       controller: "PCF8574AT"
    });
 
-   lcd.clear();
-   lcd.print(`API Starting`)
-   lcd.cursor(1,0).print('Wait please...')
+   function writeInLcd(line1,line2) {
+      lcd.clear();
+      lcd.print(line1);
+      lcd.cursor(1,0).print(line2);
+   };
+
+   writeInLcd('API Starting', 'Wait please...');
 
    const app = express();
    app.use(express.json());
 
-
-   
    app.get('/turn-on/:id', (req, res) => {
-      const {id} = req.params
-      
-
-      
+      const {id} = req.params;
       
       led.stop().off();
       led.on();
-      
-      lcd.clear();
-      lcd.print(`Led Port: ${id}`)
-      lcd.cursor(1,0).print('Led Status: On')
-      
-      return res.json({message: 'success'})
-      
-   })
+            
+      writeInLcd(`Led Port: ${id}`, 'Led Status: On')
+
+      return res.json({message: 'success'});
+   });
    
    app.get('/turn-off/:id', (req, res) => {
-      const {id} = req.params
-      
-
+      const {id} = req.params;
       
       led.stop().off();
       
-      
-      lcd.clear();
-      lcd.print(`Led Port: ${id}`)
-      lcd.cursor(1,0).print('Led Status: Off')
-      
-      
-      return res.json({message: 'success'})
-      
+      writeInLcd(`Led Port: ${id}`, 'Led Status: Off')
+
+      return res.json({message: 'success'});
    })
    
    app.get('/blink/:id', (req, res) => {
-      const {id} = req.params
+      const {id} = req.params;
       const {interval} = req.query;
-      
 
-      led.stop().off()
+      led.stop().off();
+      led.blink(interval);
+
+      writeInLcd(`Blink on port ${id}`,`Interval: ${interval}ms`)
       
-      led.blink(interval)
-      
-      lcd.clear();
-      lcd.print(`Blink on port ${id}`)
-      lcd.cursor(1,0).print(`Interval: ${interval}ms`)
-      
-      return res.json({message:'success'})
+      return res.json({message:'success'});
    })
    
    app.post('/lcd', (req, res) => {
       const {message} = req.body;
       
-      const lcd = new five.LCD({ 
-         controller: "PCF8574AT"
-      });
-      lcd.print('Message Received')
-      lcd.cursor(1,0).print(message); 
+      writeInLcd('Message Received', message)
       
       return res.json({message:'success'})
    })
 
    app.listen(3333, () => {
-      lcd.clear();
-      lcd.print(`API Online.`)
-      lcd.cursor(1,0).print('API Port: 3333')
-      console.log('Server Started in port 3333')
-   })
-})
+      writeInLcd('API Online','API Port: 3333')
+
+      console.log('Server Started in port 3333');
+   });
+});
